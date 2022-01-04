@@ -1,0 +1,8 @@
+div {
+	width:			100%;
+	height:			auto;
+	overflow:		auto;
+	background-image:	url(back.bmp);
+	background-attachment:	fixed;
+}
+
