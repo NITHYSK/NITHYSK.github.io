@@ -1,8 +1,26 @@
-div {
-	width:			100%;
-	height:			auto;
-	overflow:		auto;
-	background-image:	url(back.bmp);
-	background-attachment:	fixed;
+h1 {
+	color:			#C0C0C0;
+}
+
+p {
+	color:			#C0C0C0;
+}
+
+li {
+	color:			#C0C0C0;
+}
+
+a:link {
+	color:			#40C040;
+}
+
+a:visited {
+	color:			#C0C040;
+}
+
+body {
+	background-color:	#000040;
+	/* background-image:	url(back.bmp); */
+	/* background-attachment:	fixed; */
 }
 
