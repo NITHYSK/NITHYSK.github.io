@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<!-- 文字コードを指定 -->
+		<meta charset = 'utf-8'>
+
+		<!-- タイトル -->
+		<title>ブロック崩し</title>
+		<style>
+*{ padding: 0; margin: 0; }
+canvas { background: #eee; display: block; margin: 0 auto; }
+		</style>
+
+		<!-- スマホ表示対応 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+
+		<link rel="icon" href="../../icon.png">
+
+		<!-- スタイル指定 -->
+		<link rel="stylesheet" href="../../styles.css">
+		<link rel="stylesheet" href="./style.css">
+	</head>
+
+	<body>
+		<p>
+		<h1>ブロック崩し</h1>
+		</p>
+		<!-- <canvas>要素はゲームを描画する -->
+		<!-- <canvas>要素は簡単に参照を取得できるようにmyCanvasというidを持つ -->
+		<canvas id="myCanvas" width="480" height="320"></canvas>
+
+
+		<p>
+		<script>
+			/* <canvas>要素へ描画するには、まずJavascriptから<canvas>要素への参照を取得しなければならない */
+			/* <canvas>要素への参照をcanvasに保存 */
+			var canvas = document.getElementById("myCanvas");
+
+/* 2D描画コンテキストを保存するためにctx変数を作成 */
+var ctx = canvas.getContext("2d");
+
+var x = canvas.width/2;
+var y = canvas.height-30;
+
+var dx = 2;
+var dy = -2;
+
+var ballRadius = 10;
+
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth)/2;
+
+var rightPressed = false;
+var leftPressed = false;
+
+var ballColor = "#0095DD";
+
+function drawPaddle()
+{
+	ctx.beginPath();
+	ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+	ctx.fillStyle = "#0095DD";
+	ctx.fill();
+	ctx.closePath();
+}
+
+function keyDownHandler(e)
+{
+	if(e.key == "Right" || e.key == "ArrowRight")
+	{
+		rightPressed = true;
+	} else {
+		if(e.key == "Left" || e.key == "ArrowLeft")
+		{
+			leftPressed = true;
+		}
+	}
+}
+
+function keyUpHandler(e)
+{
+	if(e.key == "Right" || e.key == "ArrowRight")
+	{
+		rightPressed = false;
+	} else {
+		if(e.key == "Left" || e.key == "ArrowLeft")
+		{
+			leftPressed = false;
+		}
+	}
+}
+
+function drawBall()
+{
+	ctx.beginPath();
+	ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+	ctx.fillStyle=ballColor;
+	ctx.fill();
+	ctx.closePath();
+}
+
+function draw()
+{
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	drawBall();
+	drawPaddle();
+	if(rightPressed)
+	{
+		if(paddleX < canvas.width-paddleWidth)
+		{
+			paddleX += 7;
+		}
+	}
+	if(leftPressed)
+	{
+		if(paddleX > 0)
+		{
+			paddleX -= 7;
+		}
+	}
+	x += dx;
+	y += dy;
+	if(y + dy < ballRadius)
+	{
+		dy = -dy;
+	} else {
+		if(y+dy > canvas.height-ballRadius-paddleHeight)
+		{
+			if(paddleX < x && x<paddleX + paddleWidth)
+			{
+				dy = -dy;
+			} else {
+				alert("GAME OVER");
+				document.location.reload();
+				clearInterval(interval);
+			}
+		}
+	}
+	if(x + dx > canvas.width-ballRadius || x + dy < ballRadius)
+	{
+		dx = -dx;
+	}
+}
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+var interval = setInterval(draw, 10);
+
+		</script>
+		</p>
+
+		<p>
+		<hr />
+
+		<h2>参考文献</h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">そのままのJavascriptを使ったブロックくずしゲーム - ゲーム開発 | MDN</a></li>
+		</ul>
+		</p>
+	</body>
+</html>
