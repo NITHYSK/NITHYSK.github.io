@@ -60,7 +60,7 @@ label#menu-icon {
 	text-align: center;
 	top: 20px;
 	width: 30px; /*アイコン横幅*/
-	transition: all 0.3s linear 0s; /*0.3s はアニメーションにかかる時間*/
+	transition: all 0.2s linear 0s; /*0.2s はアニメーションにかかる時間*/
 	z-index: 1001;
 	transition: 1s;
 }
@@ -90,8 +90,8 @@ label#menu-icon {
 	display: none; /*チェックボックス本体は見えないようにしている*/
 }
 #menu-cb:checked ~ #ham-menu {
-	transform: translate(-100%); /*メニュー本体横幅 width と合わせる*/
-	text-align: center;
+	transform: translate(-30%); /*メニュー本体横幅の比率を指定 */
+	text-align: left;
 }
 #menu-cb:checked ~ #menu-icon,
 #menu-cb:checked ~ #menu-icon::before,
