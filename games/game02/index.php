@@ -22,7 +22,11 @@ canvas { background: #eee; display: block; margin: 0 auto; }
 		<link rel="stylesheet" href="../styles.css">
 	</head>
 	<body>
-		<p><h1>
+<?php
+$webroot = $_SERVER['DOCUMENT_ROOT'];
+include($webroot."/header.php");
+?>
+		<h1>
 			ジャイロセンサのテスト</h1></p>
 
 		<canvas id="myCanvas" width="300px" height="300px"></canvas>
@@ -32,8 +36,9 @@ canvas { background: #eee; display: block; margin: 0 auto; }
 		<output id="outputText"></output>
 		</p>
 		<hr/>
-		<a href="../index.html">ゲーム一覧へ戻る</a>
+		<a href="../index.php">ゲーム一覧へ戻る</a>
 	</body>
+
 </html>
 
 </body>

@@ -10,37 +10,19 @@
 		<!-- スマホ表示対応 -->
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
 
-		<link rel="icon" href="./icon.png">
+		<link rel="icon" href="/icon.png">
 
 		<!-- スタイル指定 -->
-		<link rel="stylesheet" href="./styles.css">
+		<link rel="stylesheet" href="/styles.css">
 	</head>
 
 	<body>
-		<header id="header">
-			<h3>早坂のホームページ</h3>
-			<input id="menu-cb" type="checkbox" value="off">
-			<label id="menu-icon" for="menu-cb"></label>
-			<div id="ham-menu">
-				<ul class="header-items-sp">
-					</br></br>
-					<li class="header-item-sp"><a href=""><span>Home</span></a></li></br>
-					<li class="header-item-sp"><a href="./blog/index.html"><span>Blog</span></a></li></br>
-					<li class="header-item-sp"><a href="./games/index.html"><span>Games</span></a></li></br>
-					<li class="header-item-sp"><a href="./gallery/index.html"><span>Gallery</span></a></li></br>
-					<li class="header-item-sp"><a href=""><span>About</span></a></li></br>
-				</ul>
-			</div>
-			<ul class="header-items">
-				<li class="header-item"><a href="">Home</a></li>
-				<li class="header-item"><a href="./blog/index.html">Blog</a></li>
-				<li class="header-item"><a href="./games/index.html">Games</a></li>
-				<li class="header-item"><a href="./gallery/index.html">Gallery</a></li>
-			</ul>
-		</header>
+<?php
+$webroot = $_SERVER['DOCUMENT_ROOT'];
+include($webroot."/header.php");
+?>
 		<!-- <div class="background"> -->
 
-		</p>
 		<h2>概要</h2>
 		<p>工事中</p>
 
@@ -48,9 +30,9 @@
 
 		<h2>Contents</h2>
 		<ul>
-			<li><a href="./blog/index.html">Blog</a></li>
-			<li><a href="./games/index.html">Games</a></li>
-			<li><a href="./gallery/index.html">Gallery</a></li>
+			<li><a href="/blog/index.php">Blog</a></li>
+			<li><a href="/games/index.php">Games</a></li>
+			<li><a href="/gallery/index.php">Gallery</a></li>
 		</ul>
 		</p>
 

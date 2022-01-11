@@ -22,6 +22,11 @@ canvas { background: #eee; display: block; margin: 0 auto; }
 	</head>
 
 	<body>
+<?php
+$webroot = $_SERVER['DOCUMENT_ROOT'];
+include($webroot."/header.php");
+?>
+
 		<p>
 		<h1>ブロック崩し</h1>
 		</p>
@@ -45,6 +50,6 @@ canvas { background: #eee; display: block; margin: 0 auto; }
 			<li><a href="https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">そのままのJavascriptを使ったブロックくずしゲーム - ゲーム開発 | MDN</a></li>
 		</ul>
 		</p>
-		<a href="../index.html">ゲーム一覧へ戻る</a>
+		<a href="../index.php">ゲーム一覧へ戻る</a>
 	</body>
 </html>

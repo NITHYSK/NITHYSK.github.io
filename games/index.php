@@ -18,18 +18,22 @@
 	</head>
 
 	<body>
+<?php
+$webroot = $_SERVER['DOCUMENT_ROOT'];
+include($webroot."/header.php");
+?>
 		<h1>ゲーム一覧</h1>
 
-		<a href="./game01/index.html">
+		<a href="./game01/index.php">
 			<img src="game01.png" alt="ブロック崩し">
 		</a><br>
-		<a href="./game01/index.html">ブロック崩し</a>
+		<a href="./game01/index.php">ブロック崩し</a>
 		</p>
-		<a href="./game02/index.html">
+		<a href="./game02/index.php">
 			ジャイロセンサのテスト</a>
 
 
 		</p>
-		<a href="../index.html">早坂のホームページへ戻る</a>
+		<a href="../index.php">早坂のホームページへ戻る</a>
 	</body>
 </html>

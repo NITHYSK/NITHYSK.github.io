@@ -17,6 +17,10 @@
 	</head>
 
 	<body>
+<?php
+$webroot = $_SERVER['DOCUMENT_ROOT'];
+include($webroot."/header.php");
+?>
 		<h1>2022年1月10日</h1>
 		<p>
 		細部の更新を行った。<br>
@@ -34,6 +38,6 @@
 		</p>
 
 
-		<a href="./index.html">戻る</a>
+		<a href="./index.php">戻る</a>
 	</body>
 </html>

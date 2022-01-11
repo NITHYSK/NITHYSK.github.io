@@ -17,12 +17,16 @@
 	</head>
 
 	<body>
+<?php
+$webroot = $_SERVER['DOCUMENT_ROOT'];
+include($webroot."/header.php");
+?>
 		<h1>2022年1月5日</h1>
-		<p><a href="../games/index.html">ブロック崩し</a>を作った。というか、ほとんど写経である。<br>
+		<p><a href="../games/index.php">ブロック崩し</a>を作った。というか、ほとんど写経である。<br>
 		JavaScriptで何かを書いた経験が全く無いというわけではないが、思いのほか時間がかかった。<br>
 		htmlの中にJSを直接書き込むとVIMのハイライトがしょっちゅうおかしくなるので、今後は別のファイルに分けようかと思う。<br>
 		スマホでのプレイにも対応予定。</p>
 
-		<a href="../index.html">早坂のホームページに戻る</a>
+		<a href="../index.php">早坂のホームページに戻る</a>
 	</body>
 </html>

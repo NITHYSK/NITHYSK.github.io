@@ -17,14 +17,14 @@
 	</head>
 
 	<body>
-		<h1>早坂のブログ</h1>
-		<ul>
-			<li><a href="./2022_01_04.html">2022年1月4日</a></li>
-			<li><a href="./2022_01_05.html">2022年1月5日</a></li>
-			<li><a href="./2022_01_10.html">2022年1月10日</a></li>
-		</ul>
-
-
-		<a href="../index.html">早坂のホームページに戻る</a>
+<?php
+$webroot = $_SERVER['DOCUMENT_ROOT'];
+include($webroot."/header.php");
+?>
+		<h1>2022年1月4日</h1>
+		<p>当ブログはサイトジェネレータ等のツールを一切使用しておりません。</p>
+		<p>手書きHTMLの温もりと抜群の軽量感をお楽しみください。</p>
+		
+		<a href="./index.php">戻る</a>
 	</body>
 </html>
