@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<!-- 文字コードを指定 -->
+		<meta charset = 'utf-8'>
+
+		<!-- タイトル -->
+		<title>ブロック崩し</title>
+		<style>
+*{ padding: 0; margin: 0; }
+canvas { background: #eee; display: block; margin: 0 auto; }
+		</style>
+
+		<!-- スマホ表示対応 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+
+		<link rel="icon" href="../../icon.png">
+
+		<!-- スタイル指定 -->
+		<link rel="stylesheet" href="../../styles.css">
+		<link rel="stylesheet" href="./style.css">
+	</head>
+
+	<body>
+		<p>
+		<h1>ブロック崩し</h1>
+		</p>
+		<!-- <canvas>要素はゲームを描画する -->
+		<!-- <canvas>要素は簡単に参照を取得できるようにmyCanvasというidを持つ -->
+		<canvas id="myCanvas" width="480" height="320"></canvas>
+
+
+		<p>
+		<script type="text/javascript" src="./brickbreaker.js"></script>
+		</p>
+		<p style="text-align:center">操作方法: マウス<br>
+		※このゲームを動作させるにはJavaScriptを有効にする必要があります。<br>
+		※スマホでのプレイは想定していません。</p>
+
+		<p>
+		<hr />
+
+		<h2>参考文献</h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">そのままのJavascriptを使ったブロックくずしゲーム - ゲーム開発 | MDN</a></li>
+		</ul>
+		</p>
+		<a href="../index.html">ゲーム一覧へ戻る</a>
+	</body>
+</html>
