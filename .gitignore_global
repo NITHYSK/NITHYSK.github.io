@@ -1,0 +1,4 @@
+# .GITIGNORE
+
+# VIMの一時ファイル
+*.swp

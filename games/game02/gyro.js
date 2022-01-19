@@ -18,6 +18,9 @@ const scene = new THREE.Scene()
 // カメラの準備
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000)
 
+// コントローラーの準備
+const controls = new THREE.OrbitControls(camera, document.body)
+
 // レンダラーの準備
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
@@ -86,13 +89,13 @@ function deg2rad(theta)
 /* 最初に呼び出される描画ループ */
 function animate()
 {
+	requestAnimationFrame(animate);	// 次の描画ループを呼び出す
+	controls.update();		// コントローラの更新
 	cube.rotation.x = -deg2rad(orientation[2])
 	cube.rotation.y = -deg2rad(orientation[3])
 	cube.rotation.z = -deg2rad(orientation[1])
 
-	//ctx.clearRect(0, 0, canvas.width, canvas.height);
-	//drawOrientation();
-	requestAnimationFrame(animate);	// 次の描画ループを呼び出す
+	
 	renderer.render(scene, camera)
 
 }
