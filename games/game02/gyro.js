@@ -10,7 +10,7 @@
  */
 
 // rad/deg
-const float __radian = Math.PI / 180.0;
+const __radian = Math.PI / 180.0;
 
 // シーンの準備
 const scene = new THREE.Scene()
@@ -78,7 +78,7 @@ function handleOrientation(e)
 }
 
 /* 度をラジアンに変換して返す */
-function deg2rad(float theta)
+function deg2rad(theta)
 {
 	return theta * __radian;
 }
