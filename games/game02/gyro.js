@@ -9,6 +9,9 @@
  * 		2.https://developer.mozilla.org/ja/docs/Web/API/Detecting_device_orientation
  */
 
+// rad/deg
+const float __radian = Math.PI / 180.0;
+
 // シーンの準備
 const scene = new THREE.Scene()
 
@@ -74,26 +77,18 @@ function handleOrientation(e)
 	}
 }
 
-/* デバイスの向きをキャンバスに描画 */
-/*
-function drawOrientation()
+/* 度をラジアンに変換して返す */
+function deg2rad(float theta)
 {
-	ctx.font	= "20px Arial";
-	ctx.fillStyle	= "#000000";
-	ctx.fillText("Absolute:	"+orientation[0], 10, 20);
-	ctx.fillText("Alpha:	"+orientation[1], 10, 40);
-	ctx.fillText("Beta:	"+orientation[2], 10, 60);
-	ctx.fillText("Gamma:	"+orientation[3], 10, 80);
-
+	return theta * __radian;
 }
-*/
 
 /* 最初に呼び出される描画ループ */
 function animate()
 {
-	cube.rotation.x = orientation[1]
-	cube.rotation.y = orientation[2]
-	cube.rotation.z = orientation[3]
+	cube.rotation.x = deg2rad(orientation[1])
+	cube.rotation.y = deg2rad(orientation[2])
+	cube.rotation.z = deg2rad(orientation[3])
 
 	//ctx.clearRect(0, 0, canvas.width, canvas.height);
 	//drawOrientation();
