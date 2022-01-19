@@ -86,9 +86,9 @@ function deg2rad(theta)
 /* 最初に呼び出される描画ループ */
 function animate()
 {
-	cube.rotation.x = deg2rad(orientation[1])
-	cube.rotation.y = deg2rad(orientation[2])
-	cube.rotation.z = deg2rad(orientation[3])
+	cube.rotation.x = deg2rad(orientation[2])
+	cube.rotation.y = deg2rad(orientation[3])
+	cube.rotation.z = deg2rad(orientation[1])
 
 	//ctx.clearRect(0, 0, canvas.width, canvas.height);
 	//drawOrientation();
